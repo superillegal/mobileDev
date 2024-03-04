@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="next">Далее</string>
+    <string name="your_name">Ваше имя</string>
+    <string name="hello">Привет, %s</string>
+    <string name="exit">Назад</string>
+</resources>

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name" translatable="false">Second Application</string>
+    <string name="sample_text">This is text message</string>
+    <string name="vertical">Vertical orientation</string>
+    <string name="horizontal">Horizontal orientation</string>
+    <string name="version">Android version: %d</string>
+</resources>
