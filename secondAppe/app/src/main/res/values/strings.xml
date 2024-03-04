@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="app_name" translatable="false">secondApp</string>
-    <string name="next">Next</string>
-    <string name="your_name">Your Name</string>
-    <string name="hello">"Hello, %s"</string>
-    <string name="exit">Back</string>
-</resources>
