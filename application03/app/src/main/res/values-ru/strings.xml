@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Application03</string>
+    <string name="name">Разработчик</string>
+    <string name="next">Далее</string>
+    <string name="prev">Назад</string>
+    <string name="exit">Выйти</string>
+</resources>
