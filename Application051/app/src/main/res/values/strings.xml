@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name" translatable="false">Application051</string>
+    <string name="edit_text">Edit</string>
+    <string name="plus">Add</string>
+    <string name="minus">Del</string>
+
+</resources>

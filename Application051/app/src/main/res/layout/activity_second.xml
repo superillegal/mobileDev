@@ -1,0 +1,52 @@
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:id="@+id/SecondActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:id="@+id/edit_text">
+
+        </EditText>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/plus"
+            android:id="@+id/plus"
+            android:backgroundTint="@color/green"
+            android:onClick="Plus">
+        </Button>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/minus"
+            android:id="@+id/minus"
+            android:backgroundTint="@color/red"
+            android:onClick="Minus">
+
+        </Button>
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/subcategories"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:choiceMode="multipleChoice"/>
+</androidx.appcompat.widget.LinearLayoutCompat>
