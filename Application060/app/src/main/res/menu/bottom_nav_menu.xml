@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_europe"
+        android:icon="@drawable/ic_europe"
+        android:title="Европа" />
+    <item
+        android:id="@+id/nav_asia"
+        android:icon="@drawable/ic_asia"
+        android:title="Азия" />
+    <item
+        android:id="@+id/nav_america"
+        android:icon="@drawable/ic_america"
+        android:title="Америка" />
+</menu>
