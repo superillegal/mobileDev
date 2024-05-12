@@ -68,8 +68,10 @@ public class NotificationService extends Service {
                 try {
                     for (int i = 0; i < blinkCount; i++) {
                         cameraManager.setTorchMode(cameraId, true);
+                        Log.i(TAG, "Фонарик включен");
                         Thread.sleep(500);
                         cameraManager.setTorchMode(cameraId, false);
+                        Log.i(TAG, "Фонарик выключен");
                         Thread.sleep(500);
                     }
                 } catch (CameraAccessException | InterruptedException e) {
