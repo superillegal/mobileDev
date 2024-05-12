@@ -24,7 +24,7 @@ public class NotificationService extends Service {
 
         cameraManager = (CameraManager) getSystemService(Context.CAMERA_SERVICE);
         try {
-            cameraId = cameraManager.getCameraIdList()[0]; // Получаем ID камеры
+            cameraId = cameraManager.getCameraIdList()[0];
         } catch (CameraAccessException e) {
             Log.e(TAG, "Ошибка получения камеры: " + e.getMessage());
         }
@@ -34,7 +34,7 @@ public class NotificationService extends Service {
             @Override
             public void run() {
                 blinkFlashlight();
-                handler.postDelayed(this, 10000); // Повтор каждые 10 секунд
+                handler.postDelayed(this, 10000);
             }
         };
     }
@@ -42,7 +42,7 @@ public class NotificationService extends Service {
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
         Log.d(TAG, "Запуск сервиса");
-        handler.postDelayed(runnable, 10000); // Запустить через 10 секунд
+        handler.postDelayed(runnable, 10000);
         return START_STICKY;
     }
 
@@ -50,7 +50,7 @@ public class NotificationService extends Service {
     public void onDestroy() {
         super.onDestroy();
         Log.d(TAG, "Сервис уничтожен");
-        handler.removeCallbacks(runnable); // Остановить мигание фонарика
+        handler.removeCallbacks(runnable);
     }
 
     @Override
@@ -60,17 +60,17 @@ public class NotificationService extends Service {
 
     private void blinkFlashlight() {
         Random random = new Random();
-        int blinkCount = random.nextInt(5) + 1; // Мигаем от 1 до 5 раз
+        int blinkCount = random.nextInt(5) + 1;
 
         new Thread(new Runnable() {
             @Override
             public void run() {
                 try {
                     for (int i = 0; i < blinkCount; i++) {
-                        cameraManager.setTorchMode(cameraId, true); // Включаем фонарик
-                        Thread.sleep(500); // Ждем полсекунды
-                        cameraManager.setTorchMode(cameraId, false); // Выключаем фонарик
-                        Thread.sleep(500); // Ждем полсекунды
+                        cameraManager.setTorchMode(cameraId, true);
+                        Thread.sleep(500);
+                        cameraManager.setTorchMode(cameraId, false);
+                        Thread.sleep(500);
                     }
                 } catch (CameraAccessException | InterruptedException e) {
                     Log.e(TAG, "Ошибка управления фонариком: " + e.getMessage());
